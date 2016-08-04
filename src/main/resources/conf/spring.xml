@@ -13,7 +13,7 @@
     <!-- 扫描文件（自动将servicec层注入） -->
     <context:component-scan base-package="cn.zw.service"/>
 
-    <!--<import resource="spring-mybatis.xml"/>-->
-    <import resource="classpath:dubbo/remote-provider.xml"/>
+    <import resource="spring-mybatis.xml"/>
+   <!-- <import resource="classpath:dubbo/remote-provider.xml"/>-->
     
 </beans>

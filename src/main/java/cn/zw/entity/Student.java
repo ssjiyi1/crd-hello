@@ -1,30 +1,33 @@
 package cn.zw.entity;
 
+
 /**
- * Created by Administrator
- * on 2016/5/30
- * 17:34.
+ * @description  学生实体操作类
+ * @auther 'Amos'
+ * @created 2016/8/3  10:14
  */
-public class Student {
 
-    private int id;
-    private String name;
+public class Student extends  BaseEntity{
+
+    private String uname;
+    private String pwd;
     private int age;
+    private String gender;
 
-    public int getId() {
-        return id;
+    public String getUname() {
+        return uname;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUname(String uname) {
+        this.uname = uname;
     }
 
-    public String getName() {
-        return name;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
     public int getAge() {
@@ -33,5 +36,13 @@ public class Student {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }

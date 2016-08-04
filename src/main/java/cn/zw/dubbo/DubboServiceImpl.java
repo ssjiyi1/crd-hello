@@ -1,8 +1,7 @@
 package cn.zw.dubbo;
 
-import cn.zw.dao.StudentDao;
 import cn.zw.dubbo.dao.DubboService;
-import cn.zw.service.StudentService;
+import cn.zw.service.impl.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -13,11 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class DubboServiceImpl implements DubboService {
 
     @Autowired
-    private StudentService  studentService;
+    private StudentService studentService;
 
     @Override
     public Integer add(int num1, int num2) {
-        System.out.println("<-------------------"+studentService+"---------------->");
-        return num1 + num2 ;
+        System.out.println("<-------------------" + studentService + "---------------->");
+        return num1 + num2;
     }
 }
