@@ -1,6 +1,7 @@
 package cn.zw.dao;
 
 import cn.zw.entity.Student;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -14,4 +15,7 @@ public interface StudentDao {
     int insert(Student student);
 
     List<Student> findAllStudent();
+
+    Student findByName(@Param("name") String name);
+
 }

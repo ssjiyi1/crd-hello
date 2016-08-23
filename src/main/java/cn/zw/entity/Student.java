@@ -1,6 +1,8 @@
 package cn.zw.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * @description  学生实体操作类
  * @auther 'Amos'
@@ -10,6 +12,7 @@ package cn.zw.entity;
 public class Student extends  BaseEntity{
 
     private String uname;
+    @JsonIgnore
     private String pwd;
     private int age;
     private String gender;

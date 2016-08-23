@@ -30,4 +30,15 @@ public class ResultBuild {
     }
 
 
+    /**
+     *  请求失败
+     * @return
+     */
+    public  static Result fail(String msg){
+        Result result = new Result(Status.FAIL);
+        result.setMsg(msg);
+        return result;
+    }
+
+
 }

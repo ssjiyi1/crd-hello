@@ -1,5 +1,6 @@
 package cn.zw.service;
 
+import cn.zw.dto.Page;
 import cn.zw.entity.Student;
 
 import java.util.List;
@@ -32,5 +33,14 @@ public interface IStudentService {
      */
     Student selectOne(Long id);
 
+
+    Page<Student> pageStudent(int page, int pageSize);
+
+    /**
+     *  登陆
+     * @param name 用户名
+     * @return sig
+     */
+    Student findByName(String name);
 
 }
