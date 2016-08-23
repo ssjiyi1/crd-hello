@@ -22,4 +22,10 @@
         select * from t_student
     </select>
 
+    <select id="findByName" resultMap="studentResult"  parameterType="string" >
+        select * from t_student where uname = '${name}'
+    </select>
+
+
+
 </mapper>

@@ -205,9 +205,42 @@
 
 
 
+        <!--  mybatis 分页插件 -->
+
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>4.0.2</version>
+        </dependency>
+
+
+<!--网络请求插件 -->
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+
+
 
 
     </dependencies>
+
+
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 
     <build>
         <finalName>dubbo</finalName>

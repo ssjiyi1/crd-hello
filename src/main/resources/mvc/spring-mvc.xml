@@ -31,14 +31,23 @@
         </property>
     </bean>
 
-        <mvc:resources mapping="/common/js/**" location="/common/js/" />
-        <mvc:resources mapping="/common/jsp/**" location="/common/jsp/" />
+    <mvc:resources mapping="/common/js/**" location="/common/js/"/>
+    <mvc:resources mapping="/common/jsp/**" location="/common/jsp/"/>
+    <mvc:resources mapping="/common/ace/**" location="/common/ace/"/>
+    <mvc:resources mapping="/common/css/**" location="/common/css/"/>
+    <mvc:resources mapping="/common/img/**" location="/common/img/"/>
+
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+
+    <mvc:interceptors>
+        <bean class="cn.zw.controller.filter.UserLoginInterceptor"/>
+    </mvc:interceptors>
 
 
 </beans>

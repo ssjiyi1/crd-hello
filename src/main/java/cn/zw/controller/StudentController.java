@@ -44,27 +44,6 @@ public class StudentController {
     }
 
 
-
-    @RequestMapping("/login")
-    @ResponseBody
-    public  ModelAndView  login(String name,String pwd){
-        ModelAndView mav = new ModelAndView("/student/list");
-        try {
-          Student student =  studentService.findByName(name);
-            if(null==student || !student.getPwd().equals(pwd)){
-                mav.setViewName("/student/login");
-                mav.addObject("info","用户名或者密码错误");
-                return mav;
-            }
-        }catch (Exception e){
-            LOGGER.error("登陆失败",e);
-            mav.setViewName("/student/login");
-            mav.addObject("info",e.getMessage());
-        }
-        return mav;
-    }
-
-
     /**
      *   查询所有的学生
      * @return
@@ -108,10 +87,6 @@ public class StudentController {
 
 
 
-    @RequestMapping("/login")
-    public String login() {
-        return "/student/login";
-    }
 
 
 
